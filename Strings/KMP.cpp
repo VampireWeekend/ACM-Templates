@@ -1,4 +1,5 @@
 //KMP
+// s是要匹配的串（短串）
 
 void buildnext(char s[]) {
 	int len=strlen(s);
@@ -18,6 +19,6 @@ void buildnext(char s[]) {
 	     	   j=next[j];
 	   	 if (k[j]==s[i]) j++;
 	   	 if (j==lenk) {
-			ans++;j=next[i];
+			ans++;j=next[j];
 		 }
 	}
